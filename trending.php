@@ -10,6 +10,6 @@ $ga->requestReportData(65923861,array('searchKeyword'),array('pageviews','visits
   echo "Trending searches: ";
 foreach($ga->getResults() as $result)
 {
-  echo '<a href="?hashtag='.$result.'">'.$result.'</a> ';
+  echo '<a href="?hashtag='.urlencode($result).'">'.$result.'</a> ';
 }
 ?>
