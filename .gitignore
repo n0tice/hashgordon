@@ -2,3 +2,15 @@
 config.php
 
 .DS_Store
+
+custom/jquery-ui-1.9.1.custom.css
+
+custom/jquery-ui-1.9.1.custom.min.js
+
+custom/mapmaker.embed.js
+
+custom/mapmaker.php
+
+custom/plugins.js
+
+custom/style.css
