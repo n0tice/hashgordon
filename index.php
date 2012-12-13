@@ -133,7 +133,7 @@ $embed_code = $embed_base . $embed_q . $embed_noticeboard . $embed_user . $embed
   <label class="control-label" for="flags"><strong>Postmoderate</strong><br><small>Max flags</small></label>
      <div class="controls"><input type="text" id="flags" class="input-small" <?php if ($_GET['flags']) { echo "placeholder=\"".$maxflags."\" value=\"".$maxflags."\""; } else { echo "placeholder=\"0\""; } ?> name="flags"></div>
 </div>
-<a href="http://n0tice.org/for-publishers/moderation-tools-for-publishers/" class="btn btn-small btn-primary"><i class="icon-info-sign icon-white"></i> Getting Started Guide</a>
+<a href="http://n0tice.org/for-publishers/moderation-tools-for-publishers/" class="btn btn-small btn-primary disabled"><i class="icon-info-sign icon-white"></i> Getting Started Guide</a>
 
     </div>
     <div class="span10">
