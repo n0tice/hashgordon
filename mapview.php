@@ -3,7 +3,7 @@
 require_once ('header.php');
 
 if (!$_GET['hashtag']) {
-	$hashtag = "*";
+	$hashtag = "";
 } else {
 	$hashtag = htmlspecialchars($_GET['hashtag']);
 }
@@ -65,7 +65,6 @@ $embed_code = "<iframe width=\"" . $width . "\" height=\"" . $height . "\" frame
 ?>
 
 <body>
-
 <div class="navbar">
         <div class="navbar-inner navbar-fixed-top">
             <div class="container-fluid">

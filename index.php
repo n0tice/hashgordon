@@ -3,7 +3,7 @@
 require_once ('header.php');
 
 if (empty($_GET['hashtag'])) {
-  $hashtag = "*";
+  $hashtag = "";
 } else {
   $hashtag = htmlspecialchars($_GET['hashtag']);
 }
@@ -68,6 +68,8 @@ $embed_title = " ";
 $embed_end = "</a>";
 $embed_script = "<script src=\"http://platform.n0tice.com/embed.js\" charset=\"utf-8\"></script>";
 $embed_code = $embed_base . $embed_q . $embed_noticeboard . $embed_user . $embed_votedby . $embed_caption . $embed_location . $embed_limit . $embed_imagesize . $embed_gutter . $embed_pagination . $embed_close . $embed_title . $embed_end . $embed_script;
+$api_url_json = "http://n0ticeapis.com/2/search?q=".$hashtag."&noticeboard=".$noticeboard."&user=".$username."&votedInterestingBy=".$votedby;
+$api_url_rss = "http://n0ticeapis.com/2/search?q=".$hashtag."&noticeboard=".$noticeboard."&user=".$username."&votedInterestingBy=".$votedby."&format=rss";
 
 ?>
 
@@ -164,7 +166,7 @@ echo "<br><br>";
 echo "<div class=\"well\"><h3>Embed code</h3>";
 echo htmlspecialchars($embed_code, ENT_QUOTES, "UTF-8");
 echo "</div>";
-
+echo "<p align=\"right\"><a href=\"".$api_url_json."\">JSON</a> | <a href=\"".$api_url_rss."\">RSS</a></p>";
 ?>
 
 </form>
